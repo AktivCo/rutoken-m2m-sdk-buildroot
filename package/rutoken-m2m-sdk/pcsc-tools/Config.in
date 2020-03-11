@@ -1,0 +1,6 @@
+config BR2_PACKAGE_PCSC_TOOLS
+		bool "pcsc-tools"
+                help
+                        These tools are used to test a PC/SC driver, card or reader or send commands in a friendly environment
+
+                        http://ludovic.rousseau.free.fr/softwares/pcsc-tools/
