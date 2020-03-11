@@ -2,5 +2,6 @@ menu "Rutoken M2M SDK"
 
 	source "package/rutoken-m2m-sdk/pcsc-tools/Config.in"
 	source "package/rutoken-m2m-sdk/opensc/Config.in"
+	source "package/rutoken-m2m-sdk/m2m-utils/Config.in"
 
 endmenu

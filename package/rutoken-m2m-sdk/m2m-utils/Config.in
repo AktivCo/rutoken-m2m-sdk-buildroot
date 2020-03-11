@@ -1,0 +1,9 @@
+config BR2_PACKAGE_RUTOKEN_M2M_UTILS
+		bool "M2M Utilities"
+		help
+			Rutoken scripts for interact with M2M demo board
+			
+			Following scripts are included in this package:
+				rt-control    - system logging and board devices control
+				rt-run-sample - samples logging and configuration
+				rt-uart-test  - Rutoken 4010 driver Transport API test
