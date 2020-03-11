@@ -1,0 +1,45 @@
+#!/bin/bash
+#
+# pcscd     Starts pcscd.
+#
+
+umask 077
+
+# Start the service pcscd
+start() {
+        printf "Starting pcscd: "
+        /usr/sbin/pcscd
+        ### Create the lock file ###
+        touch /var/lock/pcscd
+        echo "OK"
+}
+# Restart the service pcscd
+stop() {
+        printf "Stopping pcscd: "
+        killall pcscd
+        ### Now, delete the lock file ###
+        rm -f /var/lock/pcscd
+        echo "OK"
+}
+restart() {
+    stop
+    start
+}
+
+### main logic ###
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  restart|reload)
+        restart
+        ;;
+  *)
+        echo $"Usage: $0 {start|stop|restart}"
+        exit 1
+esac
+
+exit $?
