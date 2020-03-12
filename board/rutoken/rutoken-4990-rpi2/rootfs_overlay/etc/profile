@@ -1,0 +1,159 @@
+Color_Off='\e[0m'       # Text Reset
+
+Bold='\e[1m'
+
+Black='\e[0;30m'        # Black
+Red='\e[0;31m'          # Red
+Green='\e[0;32m'        # Green
+Yellow='\e[0;33m'       # Yellow
+Blue='\e[0;34m'         # Blue
+Purple='\e[0;35m'       # Purple
+Cyan='\e[0;36m'         # Cyan
+White='\e[0;37m'        # White
+
+BBlack='\e[1;30m'       # Black
+BRed='\e[1;31m'         # Red
+BGreen='\e[1;32m'       # Green
+BYellow='\e[1;33m'      # Yellow
+BBlue='\e[1;34m'        # Blue
+BPurple='\e[1;35m'      # Purple
+BCyan='\e[1;36m'        # Cyan
+BWhite='\e[1;37m'       # White
+
+UBlack='\e[4;30m'       # Black
+URed='\e[4;31m'         # Red
+UGreen='\e[4;32m'       # Green
+UYellow='\e[4;33m'      # Yellow
+UBlue='\e[4;34m'        # Blue
+UPurple='\e[4;35m'      # Purple
+UCyan='\e[4;36m'        # Cyan
+UWhite='\e[4;37m'       # White
+
+On_Black='\e[40m'       # Black
+On_Red='\e[41m'         # Red
+On_Green='\e[42m'       # Green
+On_Yellow='\e[43m'      # Yellow
+On_Blue='\e[44m'        # Blue
+On_Purple='\e[45m'      # Purple
+On_Cyan='\e[46m'        # Cyan
+On_White='\e[47m'       # White
+
+IBlack='\e[0;90m'       # Black
+IRed='\e[0;91m'         # Red
+IGreen='\e[0;92m'       # Green
+IYellow='\e[0;93m'      # Yellow
+IBlue='\e[0;94m'        # Blue
+IPurple='\e[0;95m'      # Purple
+ICyan='\e[0;96m'        # Cyan
+IWhite='\e[0;97m'       # White
+
+BIBlack='\e[1;90m'      # Black
+BIRed='\e[1;91m'        # Red
+BIGreen='\e[1;92m'      # Green
+BIYellow='\e[1;93m'     # Yellow
+BIBlue='\e[1;94m'       # Blue
+BIPurple='\e[1;95m'     # Purple
+BICyan='\e[1;96m'       # Cyan
+BIWhite='\e[1;97m'      # White
+
+On_IBlack='\e[0;100m'   # Black
+On_IRed='\e[0;101m'     # Red
+On_IGreen='\e[0;102m'   # Green
+On_IYellow='\e[0;103m'  # Yellow
+On_IBlue='\e[0;104m'    # Blue
+On_IPurple='\e[0;105m'  # Purple
+On_ICyan='\e[0;106m'    # Cyan
+On_IWhite='\e[0;107m'   # White
+
+export PATH="/bin:/sbin:/usr/bin:/usr/sbin:/opt/Rutoken/m2m-utils:/opt/Rutoken/bin"
+
+
+if [ "$PS1" ]; then
+	if [ "`id -u`" -eq 0 ]; then
+		export PS1="\n${BRed}\u${Color_Off} ${BBlue}\w${Color_Off} \n# "
+	else
+		export PS1="\n${BGreen}\u${Color_Off} ${BBlue}\w${Color_Off} \n\$ "
+	fi
+fi
+
+export PAGER='/bin/more'
+export EDITOR='/bin/vi'
+
+alias mkdir='mkdir -p'
+
+if [ -x /usr/bin/dircolors ]; then
+	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+	alias "ls=ls --color=auto"
+	alias dir='dir --color=auto'
+fi
+
+alias ll='ls -alF'
+alias la='ls -Al'
+alias lx='ls -lXB'
+alias lk='ls -lSr'
+alias lc='ls -lcr'
+alias lu='ls -lur'
+alias lr='ls -lR'
+alias lt='ls -ltr'
+alias lm='ls -al | more'
+
+user=$(who am i | cut -d ' ' -f 1)
+
+user_home=$(sh -c "cd ~$user && pwd")
+
+for f in $(ls /opt/Rutoken/workspace/) ; do
+	if [ ! -e "$user_home/${f}" ]; then
+	        ln -s /opt/Rutoken/workspace/${f} "$user_home/${f}"
+	fi
+done
+
+#Welcome message
+echo " "
+echo -e " ${BPurple}Welcome${Color_Off} to"
+cat << "EOF"
+           ____                  _                        _                         _ 
+ _ __ ___ |___ \ _ __ ___     __| | ___ _ __ ___   ___   | |__   ___   __ _ _ __ __| |
+| '_ ` _ \  __) | '_ ` _ \   / _` |/ _ \ '_ ` _ \ / _ \  | '_ \ / _ \ / _` | '__/ _` |
+| | | | | |/ __/| | | | | | | (_| |  __/ | | | | | (_) | | |_) | (_) | (_| | | | (_| |
+|_| |_| |_|_____|_| |_| |_|  \__,_|\___|_| |_| |_|\___/  |_.__/ \___/ \__,_|_|  \__,_|
+EOF
+echo " "
+echo " "
+
+echo -e " This board presents ${BRed}Rutoken 2010${Color_Off} ${Bold}SoC${Color_Off}, ${BRed}Rutoken 2151/2100${Color_Off} ${Bold}MicroSIM${Color_Off} and ${BRed}Rutoken 4010${Color_Off} ${Bold}SOM${Color_Off} embedded modules"
+echo " "
+
+what_is_in(){
+	echo " "
+	echo -e "         ${BBlue}sdk/pkcs11${Color_Off}        - directory that contains ${BRed}Rutoken SDK${Color_Off} ${Bold}pkcs11ecp samples${Color_Off}"
+	echo -e "         ${BBlue}sdk/rtengine${Color_Off}      - directory that contains ${BRed}Rutoken SDK${Color_Off} ${Bold}rtengine samples${Color_Off}"
+	echo -e "         ${BBlue}sdk/openssl${Color_Off}       - directory that contains ${BRed}Rutoken SDK${Color_Off} ${Bold}openssl-tool${Color_Off}"
+	echo -e "         README            - full user manual to ${BRed}Rutoken 4990${Color_Off} ${Bold}board${Color_Off}"
+	echo " "
+}
+
+utils(){
+	echo " "
+	echo -e " ${Bold}Utilities${Color_Off} than can be used to interact with ${BRed}Rutoken 4990${Color_Off} ${Bold}board${Color_Off}:"
+	echo " "
+	echo -e "         ${BGreen}rt-control${Color_Off}    - control embedded modules state and system logging level"
+	echo -e "         ${BGreen}rt-run-sample${Color_Off} - run samples on specified embedded modules and log
+                         samples at different run levels${Color_Off}"
+	echo -e "         ${BGreen}rt-uart-test${Color_Off}  - run ${BRed}Rutoken 4010${Color_Off} ${Bold}driver transport API test${Color_Off}"
+	echo " "
+	echo -e "        ${Bold}For more information check README.txt/README_RUS.txt and scripts help messages${Color_Off}"
+}
+
+
+echo -e " In ${Bold}your home directory${Color_Off} you can find:"
+what_is_in
+utils
+
+
+# Source configuration files from /etc/profile.d
+for i in /etc/profile.d/*.sh ; do
+	if [ -r "$i" ]; then
+		. $i
+	fi
+done
+unset i
