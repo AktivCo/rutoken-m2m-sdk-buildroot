@@ -5,5 +5,6 @@ menu "Rutoken M2M SDK"
 	source "package/rutoken-m2m-sdk/m2m-utils/Config.in"
 	source "package/rutoken-m2m-sdk/rtuart/Config.in"
 	source "package/rutoken-m2m-sdk/rutoken-sdk-pkcs11-samples/Config.in"
+	source "package/rutoken-m2m-sdk/rutoken-sdk-rtengine-samples/Config.in"
 
 endmenu

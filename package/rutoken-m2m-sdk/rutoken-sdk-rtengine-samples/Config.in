@@ -1,0 +1,8 @@
+config BR2_PACKAGE_RUTOKEN_SDK_RTENGINE_SAMPLES 
+		bool "Rutoken SDK rtengine samples"
+		help
+			Samples from Rutoken SDK of interacting with Rutoken smartcards
+			using OpenSSL API and rtengine
+			
+			For more infromation see:
+				https://www.rutoken.ru/developers/sdk/
