@@ -1,0 +1,8 @@
+config BR2_PACKAGE_RUTOKEN_SDK_PKCS11_SAMPLES
+		bool "Rutoken SDK PKCS#11 samples"
+		help
+			Samples of interacting with Rutoken smartcards using PKCS#11
+			from Rutoken SDK  
+			
+			For more infromation see:
+				https://www.rutoken.ru/developers/sdk/
