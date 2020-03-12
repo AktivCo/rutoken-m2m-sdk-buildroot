@@ -1,0 +1,9 @@
+config BR2_PACKAGE_RTUART
+		bool "rtuart"
+		help
+			PC/SC driver for Rutoken 4010 smartcard
+			
+			Includes rtuart_transport_test -- low-level communication protocol test
+			
+			For more information about Rutoken M2M board modules see:
+				https://www.rutoken.ru/products/all/rutoken-m2m/
