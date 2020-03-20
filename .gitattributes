@@ -1,4 +1,4 @@
 *.sh text eol=lf
 *.txt text eol=lf
 *.patch -crlf
-board/rutoken/rutoken-4990-rpi2/rootfs_overlay/etc/* text eol=lf
+board/rutoken-m2m/rootfs_overlay/etc/* text eol=lf
