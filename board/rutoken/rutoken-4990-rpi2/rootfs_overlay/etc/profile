@@ -103,7 +103,7 @@ user_home=$(sh -c "cd ~$user && pwd")
 
 for f in $(ls /opt/Rutoken/workspace/) ; do
 	if [ ! -e "$user_home/${f}" ]; then
-	        ln -s /opt/Rutoken/workspace/${f} "$user_home/${f}"
+	        cp -R /opt/Rutoken/workspace/${f} "$user_home/${f}"
 	fi
 done
 
