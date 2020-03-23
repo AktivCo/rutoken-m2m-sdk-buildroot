@@ -35,4 +35,4 @@ Run utilities with `-h` option to see the help message. Also see /opt/Rutoken/m2
 
 VI. Legal information
 
-The distribution you are using is built using the Buildroot project. The distribution contains open-source software (bootloaders, kernel, libraries, tools), released under various licenses. The buildroot itself is released under GNU General Public License, version 2. The sources used to create this distribution resides in the separate partition of the same SD card the operating system is running from. By default, this partition is mounted to `/buildroot` directory. The sources of the software packages composing the distribution and corresponding license information are stored in `/buildroot/legal-info` directory.
+The distribution you are using is built using the Buildroot project. The distribution contains open-source software (bootloaders, kernel, libraries, tools), released under various licenses. The buildroot itself is released under GNU General Public License, version 2. The sources used to create this binary distribution and information concerning package licences can be found in /usr/share/legal-info.
