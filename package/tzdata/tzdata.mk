@@ -12,6 +12,9 @@ TZDATA_DEPENDENCIES = host-tzdata
 HOST_TZDATA_DEPENDENCIES = host-zic
 TZDATA_LICENSE = Public domain
 
+HOST_TZDATA_LICENSE = Public domain, BSD-3-clause
+HOST_TZDATA_LICENSE_FILES = LICENSE
+
 # Take care when re-ordering this list since this might break zone
 # dependencies
 TZDATA_DEFAULT_ZONELIST = \
