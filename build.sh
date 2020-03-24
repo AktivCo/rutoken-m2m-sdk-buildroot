@@ -92,6 +92,8 @@ build_production(){
 	cp -r "${origin_legal_info}/manifest.csv" ./legal-info/
 	cp -r "${origin_legal_info}/host-manifest.csv" ./legal-info/
 
+	revision=$(git rev-parse HEAD)
+	echo revision > version
 
 	print_info "packing sources"
 	mkdir -p output/sources/
@@ -101,7 +103,6 @@ build_production(){
 
 	rm -rf legal-info
 
-	revision=$(git rev-parse HEAD)
 	buildroot_sources_path="output/legal-info/buildroot-sources/buildroot-${revision}"
 	mkdir -p $buildroot_sources_path
 	rsync -a --exclude 'output' --exclude '.git*' --exclude 'dl' ./  "${buildroot_sources_path}/"
