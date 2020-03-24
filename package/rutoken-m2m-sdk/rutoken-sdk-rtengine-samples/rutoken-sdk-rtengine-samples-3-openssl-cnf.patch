@@ -1,0 +1,15 @@
+--- a/sdk/openssl/rtengine/samples/tool/openssl.cnf	2020-03-24 06:36:25.347747166 -0400
++++ b/sdk/openssl/rtengine/samples/tool/openssl.cnf	2020-03-24 06:38:06.131233851 -0400
+@@ -8,9 +8,9 @@
+ rtengine = gost_section
+ 
+ [ gost_section ]
+-dynamic_path = /path/to/librtengine.so
+-MODULE_PATH = /path/to/librtpkcs11ecp.so
+-RAND_TOKEN = pkcs11:manufacturer=Aktiv%20Co.;model=Rutoken%20ECP;serial=2adc8d87
++dynamic_path = rtengine
++MODULE_PATH = librtpkcs11ecp.so
++RAND_TOKEN = pkcs11:manufacturer=Aktiv%20Co.;model=Rutoken%20ECP
+ default_algorithms = CIPHERS, DIGEST, PKEY, RAND
+ 
+ # Настройки создания запросов на сертификат

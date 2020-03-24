@@ -30,11 +30,12 @@ define RUTOKEN_SDK_RTENGINE_SAMPLES_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(@D)/sdk/openssl/openssl-shared-1.1/linux_glibc-armv7hf/lib/libssl.so $(RUTOKEN_SDK_RTENGINE_SAMPLES_INSTALL_DIR)
 	$(INSTALL) -D -m 0755 $(@D)/sdk/openssl/rtengine/bin/linux_glibc-armv7hf/lib/librtengine.so $(RUTOKEN_SDK_RTENGINE_SAMPLES_INSTALL_DIR)
 	cp -R $(@D)/sdk/openssl/rtengine/samples/out/linux_glibc-armv7hf-release/* $(RUTOKEN_SDK_RTENGINE_SAMPLES_INSTALL_DIR)
-
+	
+	$(INSTALL) -D -m 0755 $(@D)/sdk/openssl/rtengine/samples/out/linux_glibc-armv7hf-release/librtpkcs11ecp.so $(TARGET_DIR)/usr/lib/
 	$(INSTALL) -D -m 0755 $(@D)/sdk/openssl/openssl-tool-1.1/linux_glibc-armv7hf/libcrypto.so $(RUTOKEN_OPENSSL_INSTALL_DIR)
 	$(INSTALL) -D -m 0755 $(@D)/sdk/openssl/openssl-tool-1.1/linux_glibc-armv7hf/libssl.so $(RUTOKEN_OPENSSL_INSTALL_DIR)
 	$(INSTALL) -D -m 0755 $(@D)/sdk/openssl/openssl-tool-1.1/linux_glibc-armv7hf/openssl $(RUTOKEN_OPENSSL_INSTALL_DIR)
-	$(INSTALL) -D -m 0755 $(@D)/sdk/openssl/rtengine/bin/linux_glibc-armv7hf/lib/librtengine.so $(RUTOKEN_OPENSSL_INSTALL_DIR)
+	$(INSTALL) -D -m 0755 $(@D)/sdk/openssl/rtengine/bin/linux_glibc-armv7hf/lib/librtengine.so $(TARGET_DIR)/usr/lib/
 
 	cp -R $(@D)/sdk/openssl/rtengine/samples/tool/demoCA $(RUTOKEN_OPENSSL_INSTALL_DIR)
 	find $(RUTOKEN_OPENSSL_INSTALL_DIR)/demoCA -type d -exec chmod 0755 {} \;
