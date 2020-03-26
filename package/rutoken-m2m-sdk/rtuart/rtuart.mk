@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-RTUART_VERSION     = testing
+RTUART_VERSION     = v1.0.0
 RTUART_SOURCE      = rtuart-$(RTUART_VERSION).tar.gz
 RTUART_SITE_METHOD = git
 RTUART_SITE        = git@scm.aktivco.ru:rutoken-res/m2m-ecp-uart.git

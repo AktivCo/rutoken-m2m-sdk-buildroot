@@ -3,7 +3,7 @@
 # Rutoken M2M utils
 #
 ################################################################################
-RUTOKEN_M2M_UTILS_VERSION = build
+RUTOKEN_M2M_UTILS_VERSION = cff2f25c8c45fa901ced4b21be5dce305feedca2
 RUTOKEN_M2M_UTILS_SOURCE      = m2m-utils-$(RUTOKEN_M2M_UTILS_VERSION).tar.gz
 RUTOKEN_M2M_UTILS_SITE_METHOD = git
 RUTOKEN_M2M_UTILS_SITE        = git@scm.aktivco.ru:rutoken-res/m2m-utils.git
@@ -11,7 +11,7 @@ RUTOKEN_M2M_UTILS_INSTALL_DIR = $(TARGET_DIR)/opt/Rutoken/m2m-utils
 RUTOKEN_M2M_UTILS_API_INSTALL_DIR = $(TARGET_DIR)/opt/Rutoken/m2m-utils/include
 RUTOKEN_M2M_UTILS_README_INSTALL_DIR = $(TARGET_DIR)/opt/Rutoken/m2m-utils/doc/
 RUTOKEN_M2M_UTILS_LICENSE = BSD-2-Clause
-RUTOKEN_M2M_UTILS_LICENSE_FILES = LICENSE LICENSE_RUS
+RUTOKEN_M2M_UTILS_LICENSE_FILES = LICENSE
 
 define RUTOKEN_M2M_UTILS_INSTALL_TARGET_CMDS
 	mkdir -p $(RUTOKEN_M2M_UTILS_API_INSTALL_DIR)
