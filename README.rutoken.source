@@ -1,3 +1,6 @@
 Rutoken M2M SDK source distribution contains the sources of Buildroot and 
 software packages sufficient to build Rutoken M2M SDK binary distribution.
+The original Buildroot source and modifications made to it in Rutoken M2M SDK
+are distributed under the same license as the Buildroot. See the `COPYING` file
+for the license.
 Legal information concerning software packages is in `legal-info` directory.

@@ -54,3 +54,8 @@ make
 For more information about the Buildroot see [The Buildroot user manual](https://buildroot.org/downloads/manual/manual.html).
 
 For more information about Rutoken M2M SDK see [project wiki](http://github.ru/AktivCo/rutoken-m2m-sdk-buildroot/wiki)
+
+## License
+
+The project is derived from the Buildroot. The project is distributed under the
+same license as the Buildroot -- see the [COPYING](COPYING) file for the license.
