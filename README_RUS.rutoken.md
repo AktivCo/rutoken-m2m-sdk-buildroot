@@ -1,4 +1,4 @@
-[English/Английский](README.rutoken.md)
+[English/Английский](README_EN.rutoken.md)
 
 # Buildroot для Рутокен M2M SDK 
 
