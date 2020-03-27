@@ -7,7 +7,7 @@
 RTUART_VERSION     = v1.0.0
 RTUART_SOURCE      = rtuart-$(RTUART_VERSION).tar.gz
 RTUART_SITE_METHOD = git
-RTUART_SITE        = git@scm.aktivco.ru:rutoken-res/m2m-ecp-uart.git
+RTUART_SITE        = git@github.com:AktivCo/rtuart.git
 RTUART_INSTALL_TARGET = YES
 RTUART_LICENSE = BSD-2-Clause
 RTUART_LICENSE_FILES = LICENSE

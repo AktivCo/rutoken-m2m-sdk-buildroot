@@ -6,7 +6,7 @@
 RUTOKEN_M2M_UTILS_VERSION = c2adba07bdad896a6c3610c9d48073f5721edddd
 RUTOKEN_M2M_UTILS_SOURCE      = m2m-utils-$(RUTOKEN_M2M_UTILS_VERSION).tar.gz
 RUTOKEN_M2M_UTILS_SITE_METHOD = git
-RUTOKEN_M2M_UTILS_SITE        = git@scm.aktivco.ru:rutoken-res/m2m-utils.git
+RUTOKEN_M2M_UTILS_SITE        = git@github.com:AktivCo/rutoken-m2m-sdk-utils.git
 RUTOKEN_M2M_UTILS_INSTALL_DIR = $(TARGET_DIR)/opt/Rutoken/m2m-utils
 RUTOKEN_M2M_UTILS_API_INSTALL_DIR = $(TARGET_DIR)/opt/Rutoken/m2m-utils/include
 RUTOKEN_M2M_UTILS_README_INSTALL_DIR = $(TARGET_DIR)/opt/Rutoken/m2m-utils/doc/
