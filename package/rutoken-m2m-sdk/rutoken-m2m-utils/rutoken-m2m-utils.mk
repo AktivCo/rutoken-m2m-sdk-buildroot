@@ -3,7 +3,7 @@
 # Rutoken M2M utils
 #
 ################################################################################
-RUTOKEN_M2M_UTILS_VERSION = cff2f25c8c45fa901ced4b21be5dce305feedca2
+RUTOKEN_M2M_UTILS_VERSION = be2ee87fb251768611388ae5e691929f64c79177
 RUTOKEN_M2M_UTILS_SOURCE      = m2m-utils-$(RUTOKEN_M2M_UTILS_VERSION).tar.gz
 RUTOKEN_M2M_UTILS_SITE_METHOD = git
 RUTOKEN_M2M_UTILS_SITE        = git@scm.aktivco.ru:rutoken-res/m2m-utils.git
