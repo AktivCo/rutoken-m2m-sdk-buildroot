@@ -93,7 +93,7 @@ build_production(){
 	cp -r "${origin_legal_info}/host-manifest.csv" ./legal-info/
 
 	revision=$(git rev-parse HEAD)
-	echo revision > version
+	echo ${revision} > version
 
 	print_info "packing sources"
 	mkdir -p output/sources/
