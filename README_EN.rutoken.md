@@ -53,7 +53,7 @@ make
 
 For more information about the Buildroot see [The Buildroot user manual](https://buildroot.org/downloads/manual/manual.html).
 
-For more information about Rutoken M2M SDK see [project wiki](http://github.ru/AktivCo/rutoken-m2m-sdk-buildroot/wiki)
+For more information about Rutoken M2M SDK see [project docs](rutoken-docs/index.md)
 
 ## License
 

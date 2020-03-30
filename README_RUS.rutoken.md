@@ -53,7 +53,7 @@ make
 
 Более подробную информацию о Buildroot можно найти в [Руководстве пользователя Buildroot](https://buildroot.org/downloads/manual/manual.html).
 
-Дополнительная информация о Рутокен M2M SDK доступна в [wiki](http://github.ru/AktivCo/rutoken-m2m-sdk-buildroot/wiki) проекта.
+Дополнительная информация о Рутокен M2M SDK доступна в [документации](rutoken-docs/index.md) проекта.
 
 ## Лицензия
 
