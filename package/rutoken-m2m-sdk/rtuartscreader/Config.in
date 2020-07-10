@@ -1,0 +1,8 @@
+config BR2_PACKAGE_RTUARTSCREADER
+		bool "rtuartscreader"
+		help
+			PC/SC driver for direct access to Rutoken 2151 & Rutoken2100 smartcards
+			using UART tranceiver and GPIO pins
+			
+			For more information about Rutoken M2M board modules see:
+				https://www.rutoken.ru/products/all/rutoken-m2m/
