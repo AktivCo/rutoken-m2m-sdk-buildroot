@@ -8,7 +8,7 @@ Rutoken M2M SDK hardware is Rutoken 4990 demonstration board compatible with Ras
 
 The Linux system for Raspberry Pi generated with the use of this project constitutes the software part of Rutoken M2M SDK.
 
-The software packages installed on the Linux system facilitate the use of smartcards. Among them there are widely-known opensource packages [pcsclite](https://pcsclite.apdu.fr/), [OpenSC](https://github.com/OpenSC/OpenSC), [CCID](https://ccid.apdu.fr/). The communication with Rutoken 4010 connected over a serial interface is provided with [rtuart](https://github.com/AktivCo/rtuart) driver. The user can assess the usage of the Rutoken smartcards by running samples from [Rutoken SDK](https://www.rutoken.ru/developers/sdk/), that communicate with the smartcards over various APIs:
+The software packages installed on the Linux system facilitate the use of smartcards. Among them there are widely-known opensource packages [pcsclite](https://pcsclite.apdu.fr/), [OpenSC](https://github.com/OpenSC/OpenSC), [CCID](https://ccid.apdu.fr/). The communication with Rutoken 4010 connected over a serial interface is provided with [rtuart](https://github.com/AktivCo/rtuart) driver. The communication with Rutoken 2151 or Rutoken 2100 smartcards connected to smartcard reader is provided with [rtuartscreader](https://github.com/AktivCo/rtuartscreader) driver. The user can assess the usage of the Rutoken smartcards by running samples from [Rutoken SDK](https://www.rutoken.ru/developers/sdk/), that communicate with the smartcards over various APIs:
 * [RSALabs PKCS#11](https://www.cryptsoft.com/pkcs11doc/) -- provided by vendor's [rtPKCS11ECP](https://www.rutoken.ru/support/download/pkcs/) library,
 * [OpenSSL API](https://www.openssl.org/docs/manmaster/man3/) (with the use of vendor's [engine](https://github.com/openssl/openssl/blob/OpenSSL_1_1_1e/README.ENGINE) -- rtengine,
 * [PC/SC](https://pcsclite.apdu.fr/api/group__API.html).
@@ -38,6 +38,10 @@ make
 ```
 
 The path to sdcard image built is `output/images/sdcard.img`.
+
+#### Installing image to SD-card
+
+To install image to SD-card use inctructions from [raspberripy.org](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) for [Linux](https://www.raspberrypi.org/documentation/installation/installing-images/linux.md), [Mac OS X](https://www.raspberrypi.org/documentation/installation/installing-images/mac.md), [Windows](https://www.raspberrypi.org/documentation/installation/installing-images/windows.md).
 
 #### Production build
 
