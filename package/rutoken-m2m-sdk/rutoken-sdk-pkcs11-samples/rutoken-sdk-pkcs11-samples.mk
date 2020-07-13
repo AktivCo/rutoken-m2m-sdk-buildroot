@@ -17,9 +17,21 @@ define RUTOKEN_SDK_PKCS11_SAMPLES_EXTRACT_CMDS
 endef
 
 define RUTOKEN_SDK_PKCS11_SAMPLES_BUILD_CMDS
-	$(MAKE) CC="$(TARGET_CC)" LD="$(TARGET_LD)" -C $(@D)/sdk/pkcs11/samples/Standard
-	$(MAKE) CC="$(TARGET_CC)" LD="$(TARGET_LD)" -C $(@D)/sdk/pkcs11/samples/Extended
-	$(MAKE) CC="$(TARGET_CC)" LD="$(TARGET_LD)" -C $(@D)/sdk/pkcs11/samples/PKIExtensions
+	$(MAKE) CC="$(TARGET_CC)" LD="$(TARGET_LD)" \
+	        ARCH_CFLAGS="-mtune=cortex-a7 -mcpu=cortex-a7 -mfpu=vfpv4-d16" \
+	        PLATFORM="linux_glibc-armv7hf" \
+	        OUTDIR="./../../pkcs11ecp-samples-linux_glibc-armv7hf" \
+	        -C $(@D)/sdk/pkcs11/samples/Standard
+	$(MAKE) CC="$(TARGET_CC)" LD="$(TARGET_LD)" \
+	        ARCH_CFLAGS="-mtune=cortex-a7 -mcpu=cortex-a7 -mfpu=vfpv4-d16" \
+	        PLATFORM="linux_glibc-armv7hf" \
+	        OUTDIR="./../../pkcs11ecp-samples-linux_glibc-armv7hf" \
+	        -C $(@D)/sdk/pkcs11/samples/Extended
+	$(MAKE) CC="$(TARGET_CC)" LD="$(TARGET_LD)" \
+	        ARCH_CFLAGS="-mtune=cortex-a7 -mcpu=cortex-a7 -mfpu=vfpv4-d16" \
+	        PLATFORM="linux_glibc-armv7hf" \
+	        OUTDIR="./../../pkcs11ecp-samples-linux_glibc-armv7hf" \
+	        -C $(@D)/sdk/pkcs11/samples/PKIExtensions
 endef
 
 define RUTOKEN_SDK_PKCS11_SAMPLES_INSTALL_TARGET_CMDS
