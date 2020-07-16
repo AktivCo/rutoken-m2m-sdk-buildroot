@@ -19,7 +19,10 @@ define RUTOKEN_SDK_RTENGINE_SAMPLES_EXTRACT_CMDS
 endef
 
 define RUTOKEN_SDK_RTENGINE_SAMPLES_BUILD_CMDS
-	$(MAKE) CC="$(TARGET_CC)" LD="$(TARGET_LD)" -C $(@D)/sdk/openssl/rtengine/samples
+	$(MAKE) CC="$(TARGET_CC)" LD="$(TARGET_LD)" \
+	        COMMON_FLAGS="-mtune=cortex-a7 -mcpu=cortex-a7 -mfpu=vfpv4-d16" \
+	        TARGET_ARCH="armv7hf" TARGET_OS="linux_glibc" \
+	        -C $(@D)/sdk/openssl/rtengine/samples
 endef
 
 define RUTOKEN_SDK_RTENGINE_SAMPLES_INSTALL_TARGET_CMDS
