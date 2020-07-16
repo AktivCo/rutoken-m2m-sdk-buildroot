@@ -1,0 +1,11 @@
+--- a/sdk/pkcs11/samples/include/Common.h	2020-07-16 19:49:18.120026113 +0300
++++ b/sdk/pkcs11/samples/include/Common.h	2020-07-16 19:49:33.308026173 +0300
+@@ -112,7 +112,7 @@
+ CK_ULONG otherEntityCertificate = 3;
+ 
+ /* Длина модуля ключа RSA в битах */
+-CK_ULONG rsaModulusBits = 512;
++CK_ULONG rsaModulusBits = 1024;
+ 
+ /* Набор параметров КриптоПро A алгоритма ГОСТ 28147-89 */
+ CK_BYTE parametersGost28147[] = { 0x06, 0x07, 0x2a, 0x85, 0x03, 0x02, 0x02, 0x1f, 0x01 };
