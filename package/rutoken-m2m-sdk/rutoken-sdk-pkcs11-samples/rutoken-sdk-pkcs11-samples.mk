@@ -39,6 +39,7 @@ define RUTOKEN_SDK_PKCS11_SAMPLES_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(@D)/sdk/pkcs11/pkcs11ecp-samples-linux_glibc-armv7hf/librtpkcs11ecp.so $(TARGET_DIR)/usr/lib
 	$(INSTALL) -D -m 0755 $(@D)/sdk/pkcs11/util/pkcs11-spy/lib/linux_glibc-armv7el/librtpkcs11-spy.so $(TARGET_DIR)/usr/lib
 	cp -R $(@D)/sdk/pkcs11/pkcs11ecp-samples-linux_glibc-armv7hf/* $(RUTOKEN_SDK_PKCS11_SAMPLES_INSTALL_DIR)
+	rm $(RUTOKEN_SDK_PKCS11_SAMPLES_INSTALL_DIR)/ManageFlash
 	chmod -R 0755 $(RUTOKEN_SDK_PKCS11_SAMPLES_INSTALL_DIR)
 endef
 
