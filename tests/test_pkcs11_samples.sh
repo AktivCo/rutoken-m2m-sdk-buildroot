@@ -187,7 +187,6 @@ run_pkcs11_samples(){
                     "VKO-GOST34.10-2012-512"
                     "HashGOST34.11-94"
                     "HashGOST34.11-2012-512"
-                    "ManageFlash"
                     "Journal"
                     "JournalParse"
                     "DeleteGOST28147-89"
